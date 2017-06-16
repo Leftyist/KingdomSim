@@ -1,0 +1,125 @@
+<Races>
+    <Race>Dwarf</Race>
+    <Race>Elf</Race>
+    <Race>Gnome</Race>
+    <Race>Half-elf</Race>
+    <Race>Half-orc</Race>
+    <Race>Halfling</Race>
+    <Race>Human</Race>
+    <Race>Orc</Race>
+    <Dwarf>
+        <Homelands>
+            <Homeland>
+                <weight>8</weight>
+                <result>Hills or Mountains</result>
+                <trait>Goldsniffer race trait</trait>
+                <trait>Highlander regional trait</trait>
+            </Homeland>
+            <Homeland>
+                <weight>8</weight>
+                <result>Underground</result>
+                <trait>Surface Stranger regional trait</trait>
+                <trait>Tunnel Fighter race trait</trait>
+            </Homeland>
+            <Homeland>
+                <weight>2</weight>
+                <result>Non-Dwarven Town or Village</result>
+                <trait>Brewmaster race trait</trait>
+                <trait>Militia Veteran regional trait</trait>
+            </Homeland>
+            <Homeland>
+                <weight>2</weight>
+                <result>Non-Dwarven City or Metropolis</result>
+                <trait>Brewmaster race trait</trait>
+                <trait>Vagabond Child regional trait</trait>
+            </Homeland>
+            <Homeland>
+                <weight>1</weight>
+                <result>Unusual Homeland</result>
+            </Homeland>
+        </Homelands>
+        <Parents>
+            <Parent>
+                <weight>6</weight>
+                <result>Both of your parents are alive.</result>
+                <trait> None </trait>
+            </Parent>
+            <Parent>
+                <weight>1</weight>
+                <result>Only your father is alive.</result>
+                <trait> None </trait>
+            </Parent>
+            <Parent>
+                <weight>1</weight>
+                <result> Only your mother is alive.</result>
+                <trait> None </trait>
+            </Parent>
+            <Parent>
+                <weight>1</weight>
+                <result>Both of your parents are dead.</result>
+                <trait>Orphaned social trait</trait>
+            </Parent>
+        </Parents>
+        <Siblings>
+            <Sibling>
+                <weight> 16 </weight>
+                <result> Biological Sibling </result>
+                <dice> 1d4 </dice>
+                <Traits>
+                    <threshold> 2 </threshold>
+                    <trait> Kin Guardian combat trait </trait>
+                </Traits>
+            </Sibling>
+
+            <Sibling>
+                <weight> 2 </weight>
+                <results>
+                    <result> Biological Sibling </result>
+                    <dice> 1d4+1 </dice>
+                    <Traits>
+                        <threshold>2</threshold>
+                        <trait> Kin Guardian combat trait </trait>
+                    </Traits>
+                </results>
+            </Sibling>
+
+            <Sibling>
+                <weight> 1 </weight>
+                <result> Biological Sibling </result>
+                <dice> 1d4 </dice>
+                <Traits>
+                    <threshold> 2 </threshold>
+                    <trait> Kin Guardian combat trait </trait>
+                </Traits>
+            </Sibling>
+
+            <Sibling>
+                <weight>1</weight>
+                <results>
+                    <result>No Siblings</result>
+                    <dice>0</dice>
+                </results>
+            </Sibling>
+        </Siblings>
+    </Dwarf>
+
+    <Elf>
+    </Elf>
+
+    <Gnome>
+
+    </Gnome>
+
+    <Half-elf>
+    </Half-elf>
+
+    <Half-orc>
+    </Half-orc>
+
+    <Halfling>
+    </Halfling>
+
+
+    <Human>
+    </Human>
+</Races>
