@@ -1,12 +1,10 @@
+package com.leftyist.kingdomsim;
+
 import org.w3c.dom.Document;
-
 import java.util.ArrayList;
-
+import com.leftyist.kingdomsim.utils.*;
 import javafx.util.Pair;
 
-/**
- * Created by arianfarahani on 4/12/17.
- */
 public class CharacterGenerator
 {
       private Document      raceDoc;

@@ -1,0 +1,268 @@
+<Weathers>
+    <Climates>
+        <Climate>Cold</Climate>
+        <Climate>Temperate</Climate>
+        <Climate>Desert</Climate>
+    </Climates>
+    <Seasons>
+        <Autumn>
+            <temp>Moderate</temp>
+        </Autumn>
+        <Winter>
+            <temp>Cold</temp>
+        </Winter>
+        <Spring>
+            <temp>Moderate</temp>
+        </Spring>
+        <Summer>
+            <temp>Warm</temp>
+        </Summer>
+    </Seasons>
+    <Winds>
+        <Calm>
+            <min>0</min>
+            <max>10</max>
+        </Calm>
+        <Windy>
+            <min>10</min>
+            <max>30</max>
+        </Windy>
+        <Severe>
+            <min>30</min>
+            <max>50</max>
+        </Severe>
+        <Windstorm>
+            <min>51</min>
+            <max>74</max>
+        </Windstorm>
+        <Hurricane>
+            <min>75</min>
+            <max>174</max>
+        </Hurricane>
+        <Tornado>
+            <min>175</min>
+            <max>300</max>
+        </Tornado>
+    </Winds>
+    <Temperatures>
+        <Cold>
+            <min>0</min>
+            <max>40</max>
+        </Cold>
+        <Moderate>
+            <min>40</min>
+            <max>60</max>
+        </Moderate>
+        <Warm>
+            <min>60</min>
+            <max>85</max>
+        </Warm>
+        <Hot>
+            <min>85</min>
+            <max>110</max>
+
+        </Hot>
+    </Temperatures>
+
+    <Precipitations>
+        <Fog>
+            <Duration>
+                <dice>2d4</dice>
+                <units>hours</units>
+            </Duration>
+            <description>
+                Whether in the form of a low-lying cloud or a mist rising from the ground, fog
+                obscures all sight beyond 5 feet, including darkvision. Creatures 5 feet away have
+                concealment (attacks by or against them have a 20% miss chance).
+            </description>
+        </Fog>
+        <Rain>
+            <Duration>
+                <dice>2d4</dice>
+                <units>hours</units>
+            </Duration>
+            <description>
+                Rain reduces visibility ranges by half, resulting in a –4 penalty on Perception
+                checks. It has the same effect on flames, ranged weapon attacks, and Perception
+                checks as severe wind.
+            </description>
+        </Rain>
+        <Snow>
+            <Duration>
+                <dice>2d4</dice>
+                <units>hours</units>
+            </Duration>
+            <description>
+                Falling snow has the same effects on visibility, ranged weapon attacks, and skill
+                checks as rain, and it costs 2 squares of movement to enter a snow-covered square.
+                A day of snowfall leaves 1d6 inches of snow on the ground.
+            </description>
+        </Snow>
+        <Sleet>
+            <Duration>
+                <dice>2d4</dice>
+                <units>hours</units>
+            </Duration>
+            <description>
+                Essentially frozen rain, sleet has the same effect as rain while falling
+                (except that its chance to extinguish protected flames is 75%) and the same effect
+                as snow once on the ground.
+            </description>
+        </Sleet>
+        <Hail>
+            <Duration>
+                <dice>1d20</dice>
+                <units>minutes</units>
+            </Duration>
+            <description>
+                Hail does not reduce visibility, but the sound of falling hail makes sound-based
+                Perception checks more difficult (–4 penalty). Sometimes (5% chance) hail can become
+                large enough to deal 1 point of lethal damage (per storm) to anything in the open.
+                Once on the ground, hail has the same effect on movement as snow.
+            </description>
+        </Hail>
+    </Precipitations>
+
+    <Storms>
+        <Snowstorm>
+
+        </Snowstorm>
+        <Blizzard>
+
+        </Blizzard>
+    </Storms>
+
+    <Cold>
+        <Weather>
+            <weight>70</weight>
+            <type>Normal</type>
+            <temp>Cold</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>3</weight>
+            <type>Heat wave</type>
+            <temp>Cold</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>7</weight>
+            <type>Cold snap</type>
+            <temp>Cold</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>10</weight>
+            <type>Inclement</type>
+            <temp>Cold</temp>
+            <wind>Windy</wind>
+            <precipitation>Snow</precipitation>
+        </Weather>
+        <Weather>
+            <weight>9</weight>
+            <type>Storm</type>
+            <temp>Cold</temp>
+            <wind>Severe</wind>
+            <precipitation>Snow</precipitation>
+        </Weather>
+        <Weather>
+            <weight>1</weight>
+            <type>Powerful Storm</type>
+            <temp>Cold</temp>
+            <wind>Windstorm</wind>
+            <precipitation>Snow</precipitation>
+        </Weather>
+
+    </Cold>
+
+    <Temperate>
+        <Weather>
+            <weight>70</weight>
+            <type>Normal</type>
+            <temp>Normal</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>5</weight>
+            <type>Heat wave</type>
+            <temp>Normal</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>5</weight>
+            <type>Cold snap</type>
+            <temp>Normal</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>3</weight>
+            <type>Fog</type>
+            <temp>Normal</temp>
+            <wind>Windy</wind>
+            <precipitation>Fog</precipitation>
+        </Weather>
+        <Weather>
+            <weight>6</weight>
+            <type>Rain</type>
+            <temp>Normal</temp>
+            <wind>Windy</wind>
+            <precipitation>Rain</precipitation>
+        </Weather>
+        <Weather>
+            <weight>1</weight>
+            <type>Sleet</type>
+            <temp>Normal</temp>
+            <wind>Windy</wind>
+            <precipitation>Sleet</precipitation>
+        </Weather>
+        <Weather>
+            <weight></weight>
+            <type>Storm</type>
+            <temp>Normal</temp>
+            <wind>Severe</wind>
+        </Weather>
+        <Weather>
+            <weight>1</weight>
+            <type>Powerful Storm</type>
+            <temp>Normal</temp>
+            <wind>Windstorm</wind>
+            <precipitation>Storm</precipitation>
+        </Weather>
+    </Temperate>
+
+    <Desert>
+        <Weather>
+            <weight>70</weight>
+            <type>Normal</type>
+            <temp>Hot</temp>
+            <wind>Calm</wind>
+        </Weather>
+        <Weather>
+            <weight>10</weight>
+            <type>Abnormal</type>
+            <temp>Hot</temp>
+            <wind>Windy</wind>
+        </Weather>
+        <Weather>
+            <weight>10</weight>
+            <type>Inclement</type>
+            <temp>Hot</temp>
+            <wind>Windy</wind>
+        </Weather>
+        <Weather>
+            <weight>9</weight>
+            <type>Storm</type>
+            <temp>Hot</temp>
+            <wind>Severe</wind>
+            <precipitation>Duststorm</precipitation>
+        </Weather>
+        <Weather>
+            <weight>1</weight>
+            <type>Powerful Storm</type>
+            <temp>Normal</temp>
+            <wind>Windstorm</wind>
+            <precipitation>Downpour</precipitation>
+        </Weather>
+    </Desert>
+
+</Weathers>

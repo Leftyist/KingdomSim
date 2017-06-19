@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Buildings>
+    <WeightedOption name="Academy" weight="10">
+        <Cost>6</Cost>
+        <BuildMonths>4</BuildMonths>
+        <Population>100</Population>
+        <Type>Town</Type>
+    </WeightedOption>
+
+    <WeightedOption name="Tower" weight="5">
+        <Cost>4</Cost>
+        <BuildMonths>6</BuildMonths>
+        <Population>200</Population>
+        <Type>Village</Type>
+    </WeightedOption>
+
+    <WeightedOption name="House" weight="25">
+        <Cost>4</Cost>
+        <BuildMonths>1</BuildMonths>
+        <Population>500</Population>
+        <Type>Village</Type>
+    </WeightedOption>
+
+    <WeightedOption name="Inn" weight="15">
+        <Cost>3</Cost>
+        <BuildMonths>2</BuildMonths>
+        <Population>300</Population>
+        <Type>Village</Type>
+    </WeightedOption>
+
+</Buildings>

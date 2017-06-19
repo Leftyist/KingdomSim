@@ -1,3 +1,5 @@
+package com.leftyist.kingdomsim.forms;
+
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +10,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
+import com.leftyist.kingdomsim.*;
 /**
  * Created by arianfarahani on 4/14/17.
  */

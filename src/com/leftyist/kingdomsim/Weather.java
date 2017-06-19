@@ -1,9 +1,14 @@
+package com.leftyist.kingdomsim;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
-
+import com.leftyist.kingdomsim.utils.*;
 import javafx.util.Pair;
+
+import static com.leftyist.kingdomsim.utils.DiceKt.roll;
+import static com.leftyist.kingdomsim.utils.DiceKt.rollRange;
 
 public class Weather
 {
@@ -105,13 +110,13 @@ public class Weather
 
       private void changeSeason() {
             String[] seasons = getSeasons();
-            int num = Dice.roll(0, seasons.length-1);
+            int num = rollRange(0, seasons.length-1);
             season = seasons[num];
       }
 
       private void changeClimate() {
             String[] climates = getClimates();
-            int num = Dice.roll(0, climates.length-1);
+            int num = rollRange(0, climates.length-1);
             climate = climates[num];
 
             buildTable();
@@ -197,7 +202,7 @@ public class Weather
             String dice = XMLParser.findValueByTag(nodes, "dice");
             String units = XMLParser.findValueByTag(nodes, "units");
 
-            precipitationTimeMinutes = Dice.roll(dice);
+            precipitationTimeMinutes = roll(dice);
             precipitationDescription = description;
 
             if(units.equals("hours"))
@@ -224,8 +229,8 @@ public class Weather
             int min = Integer.parseInt(XMLParser.findValueByTag(nodes, "min"));
             int max = Integer.parseInt(XMLParser.findValueByTag(nodes, "max"));
 
-            temperatureDay += Dice.roll(min, max);
-            temperatureNight = temperatureDay - Dice.roll(10, 20);
+            temperatureDay += rollRange(min, max);
+            temperatureNight = temperatureDay - rollRange(10, 20);
       }
 
       private void getWind(String wind) throws IllegalArgumentException
@@ -240,7 +245,7 @@ public class Weather
             int min = Integer.parseInt(XMLParser.findValueByTag(nodes, "min"));
             int max = Integer.parseInt(XMLParser.findValueByTag(nodes, "max"));
 
-            windSpeed = Dice.roll(min, max);
+            windSpeed = rollRange(min, max);
       }
 
       public void print()

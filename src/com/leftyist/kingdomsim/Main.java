@@ -1,4 +1,7 @@
+package com.leftyist.kingdomsim;
+
 import javax.swing.JFrame;
+import com.leftyist.kingdomsim.forms.formWeather;
 
 /**
  * Created by arianfarahani on 4/12/17.

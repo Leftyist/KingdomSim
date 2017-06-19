@@ -1,3 +1,5 @@
+package com.leftyist.kingdomsim.utils;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
@@ -5,9 +7,8 @@ import java.util.ArrayList;
 
 import javafx.util.Pair;
 
-/**
- * Created by arianfarahani on 4/12/17.
- */
+import static com.leftyist.kingdomsim.utils.DiceKt.*;
+
 public class WeightedTable
 {
       ArrayList<WeightedOption> options;
@@ -125,7 +126,7 @@ public class WeightedTable
 
       public ArrayList<Pair<String, String>> roll()
       {
-            int num = Dice.roll(totalWeight);
+            int num = rollRange(1, totalWeight);
             for (WeightedOption option : options) {
                   if (num <= option.upperBound)
                         return option.getValues();

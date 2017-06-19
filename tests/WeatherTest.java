@@ -1,10 +1,8 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import com.leftyist.kingdomsim.*;
 
-/**
- * Created by arianfarahani on 4/12/17.
- */
 class WeatherTest
 {
       @Test

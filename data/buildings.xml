@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Buildings>
+    <Building name="Academy">
+        <Cost>6</Cost>
+        <BuildMonths>4</BuildMonths>
+        <Population>100</Population>
+        <Type>Town</Type>
+    </Building>
+    <Building name="Tower">
+        <Cost>4</Cost>
+        <BuildMonths>6</BuildMonths>
+        <Population>200</Population>
+        <Type>Village</Type>
+    </Building>
+</Buildings>
