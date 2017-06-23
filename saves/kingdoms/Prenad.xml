@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Kingdom>
+    <Stats>
+        <name>unnamed</name>
+        <alignment>none</alignment>
+        <government>none</government>
+        <loyalty>0</loyalty>
+        <stability>0</stability>
+        <economy>0</economy>
+        <bp>-4</bp>
+        <population>100</population>
+        <fame>0</fame>
+        <infamy>0</infamy>
+        <size>0</size>
+    </Stats>
+
+    <Improvements>
+        <aqueduct>0</aqueduct>
+        <canal>0</canal>
+        <bridge>0</bridge>
+        <farm>0</farm>
+        <fishery>0</fishery>
+        <fort>0</fort>
+        <highway>0</highway>
+        <mine>0</mine>
+        <quarry>0</quarry>
+        <road>0</road>
+        <sawmill>0</sawmill>
+        <watchtower>0</watchtower>
+    </Improvements>
+
+    <Tiles>
+        <cavern>0</cavern>
+        <desert>0</desert>
+        <forest>0</forest>
+        <jungle>0</jungle>
+        <hills>0</hills>
+        <mountains>0</mountains>
+        <plains>0</plains>
+        <swamp>0</swamp>
+        <deepwater>0</deepwater>
+    </Tiles>
+
+    <BuildingQueue>
+
+    </BuildingQueue>
+
+    <Settlements>
+
+        <Colony>
+            <Stats>
+                <basevalue>0</basevalue>
+                <defense>0</defense>
+                <population>100</population>
+                <lots>1</lots>
+                <corruption>0</corruption>
+                <crime>0</crime>
+                <productivity>0</productivity>
+                <law>0</law>
+                <lore>0</lore>
+                <society>0</society>
+                <danger>0</danger>
+            </Stats>
+
+            <Buildings>
+                <House>
+                    <population>100</population>
+                    <type>village</type>
+                    <lots>1</lots>
+                </House>
+            </Buildings>
+        </Colony>
+    </Settlements>
+</Kingdom>

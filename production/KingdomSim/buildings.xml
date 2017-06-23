@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Buildings>
-    <Building name="Academy">
-        <Cost>6</Cost>
-        <BuildMonths>4</BuildMonths>
-        <Population>100</Population>
-        <Type>Town</Type>
-    </Building>
-    <Building name="Tower">
-        <Cost>4</Cost>
-        <BuildMonths>6</BuildMonths>
-        <Population>200</Population>
-        <Type>Village</Type>
-    </Building>
+    <House cost="4" turns="1">
+        <population>100</population>
+        <type>village</type>
+        <lots>1</lots>
+    </House>
+
+    <Inn cost="5" turns="2">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <society>1</society>
+        <population>30</population>
+        <basevalue>500</basevalue>
+        <type>village</type>
+        <lots>1</lots>
+    </Inn>
+
 </Buildings>

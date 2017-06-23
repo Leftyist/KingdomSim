@@ -11,9 +11,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import com.leftyist.kingdomsim.*;
-/**
- * Created by arianfarahani on 4/14/17.
- */
+import com.leftyist.kingdomsim.generators.WeatherGen;
+
 public class formWeather
 {
       private JButton rollWeatherButton;
@@ -27,7 +26,7 @@ public class formWeather
       private JLabel  durationLabel;
       private JButton button1;
 
-      private Weather weather;
+      private WeatherGen weather;
 
       public formWeather()
       {
@@ -42,8 +41,10 @@ public class formWeather
                   System.out.println(ex.toString());
             }
 
+            /*
             rollWeatherButton.addActionListener(new ActionListener()
             {
+
                   @Override
                   public void actionPerformed(ActionEvent e)
                   {
@@ -61,6 +62,7 @@ public class formWeather
                               durationLabel.setText(weather.getPrecipitationTimeMinutes() + " minutes");
                   }
             });
+            */
       }
 
       public JPanel getPanel()

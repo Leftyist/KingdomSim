@@ -1,0 +1,19 @@
+<APPEND_BELOW_ITEMS>
+    <Stats>
+        <basevalue>0</basevalue>
+        <defense>0</defense>
+        <population>0</population>
+        <lots>0</lots>
+        <corruption>0</corruption>
+        <crime>0</crime>
+        <productivity>0</productivity>
+        <law>0</law>
+        <lore>0</lore>
+        <society>0</society>
+        <danger>0</danger>
+    </Stats>
+
+    <Buildings>
+
+    </Buildings>
+</APPEND_BELOW_ITEMS>

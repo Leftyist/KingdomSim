@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Kingdom>
+    <Stats>
+        <name>unnamed</name>
+        <alignment>none</alignment>
+        <government>none</government>
+        <loyalty>0</loyalty>
+        <stability>0</stability>
+        <economy>0</economy>
+        <bp>0</bp>
+        <population>0</population>
+        <fame>0</fame>
+        <infamy>0</infamy>
+        <size>0</size>
+    </Stats>
+
+    <Improvements>
+        <aqueduct>0</aqueduct>
+        <canal>0</canal>
+        <bridge>0</bridge>
+        <farm>0</farm>
+        <fishery>0</fishery>
+        <fort>0</fort>
+        <highway>0</highway>
+        <mine>0</mine>
+        <quarry>0</quarry>
+        <road>0</road>
+        <sawmill>0</sawmill>
+        <watchtower>0</watchtower>
+    </Improvements>
+
+    <Tiles>
+        <cavern>0</cavern>
+        <desert>0</desert>
+        <forest>0</forest>
+        <jungle>0</jungle>
+        <hills>0</hills>
+        <mountains>0</mountains>
+        <plains>0</plains>
+        <swamp>0</swamp>
+        <deepwater>0</deepwater>
+    </Tiles>
+
+    <BuildingQueue>
+
+    </BuildingQueue>
+
+    <Settlements>
+
+    </Settlements>
+</Kingdom>

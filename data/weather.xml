@@ -1,73 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Weathers>
     <Climates>
         <Climate>Cold</Climate>
-        <Climate>Temperate</Climate>
+        <Climate>TemperateCold</Climate>
+        <Climate>TemperateModerate</Climate>
+        <Climate>TemperateWarm</Climate>
         <Climate>Desert</Climate>
     </Climates>
-    <Seasons>
-        <Autumn>
-            <temp>Moderate</temp>
-        </Autumn>
-        <Winter>
-            <temp>Cold</temp>
-        </Winter>
-        <Spring>
-            <temp>Moderate</temp>
-        </Spring>
-        <Summer>
-            <temp>Warm</temp>
-        </Summer>
-    </Seasons>
+
     <Winds>
         <Calm>
-            <min>0</min>
-            <max>10</max>
+            <windmin>0</windmin>
+            <windmax>10</windmax>
         </Calm>
         <Windy>
-            <min>10</min>
-            <max>30</max>
+            <windmin>10</windmin>
+            <windmax>30</windmax>
         </Windy>
         <Severe>
-            <min>30</min>
-            <max>50</max>
+            <windmin>30</windmin>
+            <windmax>50</windmax>
         </Severe>
         <Windstorm>
-            <min>51</min>
-            <max>74</max>
+            <windmin>51</windmin>
+            <windmax>74</windmax>
         </Windstorm>
         <Hurricane>
-            <min>75</min>
-            <max>174</max>
+            <windmin>75</windmin>
+            <windmax>174</windmax>
         </Hurricane>
         <Tornado>
-            <min>175</min>
-            <max>300</max>
+            <windmin>175</windmin>
+            <windmax>300</windmax>
         </Tornado>
     </Winds>
+
     <Temperatures>
         <Cold>
-            <min>0</min>
-            <max>40</max>
+            <tempmin>0</tempmin>
+            <tempmax>40</tempmax>
         </Cold>
         <Moderate>
-            <min>40</min>
-            <max>60</max>
+            <tempmin>40</tempmin>
+            <tempmax>60</tempmax>
         </Moderate>
         <Warm>
-            <min>60</min>
-            <max>85</max>
+            <tempmin>60</tempmin>
+            <tempmax>85</tempmax>
         </Warm>
         <Hot>
-            <min>85</min>
-            <max>110</max>
+            <tempmin>85</tempmin>
+            <tempmax>110</tempmax>
 
         </Hot>
     </Temperatures>
 
+    <Effects>
+        <HeatWave>
+            <mod>
+                <tempmin>10</tempmin>
+                <tempmax>10</tempmax>
+            </mod>
+        </HeatWave>
+        <ColdSnap>
+            <mod>
+                <tempmin>-10</tempmin>
+                <tempmax>-10</tempmax>
+            </mod>
+        </ColdSnap>
+    </Effects>
+
     <Precipitations>
+        <Duststorm>
+            <Duration>
+                <length>2d4-1</length>
+                <units>hours</units>
+            </Duration>
+            <description>
+                These desert storms differ from other storms in that they have no precipitation.
+                Instead, a duststorm blows fine grains of sand that obscure vision, smother
+                unprotected flames, and can even choke protected flames (50% chance). Most
+                duststorms are accompanied by severe winds and leave behind a deposit of 1d6 inches
+                of sand. There is a 10% chance for a greater duststorm to be accompanied by
+                windstorm-magnitude winds (see Table: Wind Effects). These greater duststorms deal
+                1d3 points of nonlethal damage each round to anyone caught out in the open without
+                shelter and also pose a choking hazard (see Drowning, except that a character with a
+                scarf or similar protection across her mouth and nose does not begin to choke until
+                after a number of rounds equal to 10 + her Constitution score). Greater duststorms
+                leave 2d3–1 feet of fine sand in their wake.
+            </description>
+        </Duststorm>
+        <Downpour>
+            <Duration>
+                <length>2d4</length>
+                <units>hours</units>
+            </Duration>
+            <description>
+                Treat as rain (see Precipitation, below), but conceals as fog. Can create floods. A
+                downpour lasts for 2d4 hours.
+            </description>
+        </Downpour>
         <Fog>
             <Duration>
-                <dice>2d4</dice>
+                <length>2d4</length>
                 <units>hours</units>
             </Duration>
             <description>
@@ -78,7 +113,7 @@
         </Fog>
         <Rain>
             <Duration>
-                <dice>2d4</dice>
+                <length>2d4</length>
                 <units>hours</units>
             </Duration>
             <description>
@@ -89,7 +124,7 @@
         </Rain>
         <Snow>
             <Duration>
-                <dice>2d4</dice>
+                <length>2d4</length>
                 <units>hours</units>
             </Duration>
             <description>
@@ -98,9 +133,48 @@
                 A day of snowfall leaves 1d6 inches of snow on the ground.
             </description>
         </Snow>
+        <Snowstorm>
+            <Duration>
+                <length>2d4-1</length>
+                <units>hours</units>
+            </Duration>
+            <description>
+                Heavy snow has the same effects as normal snowfall but also restricts visibility as
+                fog does (see Fog). A day of heavy snow leaves 1d4 feet of snow on the ground, and
+                it costs 4 squares of movement to enter a square covered with heavy snow. Heavy snow
+                accompanied by strong or severe winds might result in snowdrifts 1d4 × 5 feet deep,
+                especially in and around objects big enough to deflect the wind—a cabin or a large
+                tent, for instance. There is a 10% chance that a heavy snowfall is accompanied by
+                lightning (see Thunderstorm). Snow has the same effect on flames as moderate wind.
+            </description>
+        </Snowstorm>
+        <Blizzard>
+            <Duration>
+                <length>1d3</length>
+                <units>days</units>
+            </Duration>
+            <description>
+                The combination of high winds, heavy snow (typically 1d3 feet), and bitter cold make
+                blizzards deadly for all who are unprepared for them.
+            </description>
+        </Blizzard>
+        <Thunderstorm>
+            <Duration>
+                <length>2d4-1</length>
+                <units>days</units>
+            </Duration>
+            <description>
+                In addition to wind and precipitation (usually rain, but sometimes also hail),
+                thunderstorms are accompanied by lightning that can pose a hazard to characters
+                without proper shelter (especially those in metal armor). As a rule of thumb, assume
+                one bolt per minute for a 1-hour period at the center of the storm. Each bolt causes
+                between 4d8 and 10d8 points of electricity damage. One in 10 thunderstorms is
+                accompanied by a tornado.
+            </description>
+        </Thunderstorm>
         <Sleet>
             <Duration>
-                <dice>2d4</dice>
+                <length>2d4</length>
                 <units>hours</units>
             </Duration>
             <description>
@@ -111,7 +185,7 @@
         </Sleet>
         <Hail>
             <Duration>
-                <dice>1d20</dice>
+                <length>1d20</length>
                 <units>minutes</units>
             </Duration>
             <description>
@@ -123,146 +197,251 @@
         </Hail>
     </Precipitations>
 
-    <Storms>
-        <Snowstorm>
-
-        </Snowstorm>
-        <Blizzard>
-
-        </Blizzard>
-    </Storms>
-
     <Cold>
-        <Weather>
-            <weight>70</weight>
-            <type>Normal</type>
-            <temp>Cold</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>3</weight>
-            <type>Heat wave</type>
-            <temp>Cold</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>7</weight>
-            <type>Cold snap</type>
-            <temp>Cold</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>10</weight>
-            <type>Inclement</type>
-            <temp>Cold</temp>
-            <wind>Windy</wind>
-            <precipitation>Snow</precipitation>
-        </Weather>
-        <Weather>
-            <weight>9</weight>
-            <type>Storm</type>
-            <temp>Cold</temp>
-            <wind>Severe</wind>
-            <precipitation>Snow</precipitation>
-        </Weather>
-        <Weather>
-            <weight>1</weight>
-            <type>Powerful Storm</type>
-            <temp>Cold</temp>
-            <wind>Windstorm</wind>
-            <precipitation>Snow</precipitation>
-        </Weather>
-
+        <WeightedOption name="Normal" weight="70">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+        </WeightedOption>
+        <WeightedOption name="Heat Wave" weight="3">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">HeatWave</effect>
+        </WeightedOption>
+        <WeightedOption name="Cold Snap" weight="7">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">ColdSnap</effect>
+        </WeightedOption>
+        <WeightedOption name="Snow" weight="10">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Snow</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Snowstorm" weight="9">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Severe</windmin>
+            <windmax type="lookup" parent="Winds">Severe</windmax>
+            <precipitation type="lookup" parent="Precipitations">Snowstorm</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Blizzard" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Windstorm</windmin>
+            <windmax type="lookup" parent="Winds">Windstorm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Blizzard</precipitation>
+        </WeightedOption>
     </Cold>
 
-    <Temperate>
-        <Weather>
-            <weight>70</weight>
-            <type>Normal</type>
-            <temp>Normal</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>5</weight>
-            <type>Heat wave</type>
-            <temp>Normal</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>5</weight>
-            <type>Cold snap</type>
-            <temp>Normal</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>3</weight>
-            <type>Fog</type>
-            <temp>Normal</temp>
-            <wind>Windy</wind>
-            <precipitation>Fog</precipitation>
-        </Weather>
-        <Weather>
-            <weight>6</weight>
-            <type>Rain</type>
-            <temp>Normal</temp>
-            <wind>Windy</wind>
-            <precipitation>Rain</precipitation>
-        </Weather>
-        <Weather>
-            <weight>1</weight>
-            <type>Sleet</type>
-            <temp>Normal</temp>
-            <wind>Windy</wind>
-            <precipitation>Sleet</precipitation>
-        </Weather>
-        <Weather>
-            <weight></weight>
-            <type>Storm</type>
-            <temp>Normal</temp>
-            <wind>Severe</wind>
-        </Weather>
-        <Weather>
-            <weight>1</weight>
-            <type>Powerful Storm</type>
-            <temp>Normal</temp>
-            <wind>Windstorm</wind>
-            <precipitation>Storm</precipitation>
-        </Weather>
-    </Temperate>
+    <TemperateCold>
+        <WeightedOption name="Normal" weight="70">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+        </WeightedOption>
+        <WeightedOption name="Heatwave" weight="5">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">HeatWave</effect>
+        </WeightedOption>
+        <WeightedOption name="Coldsnap" weight="5">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">ColdSnap</effect>
+        </WeightedOption>
+        <WeightedOption name="Fog" weight="3">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Fog</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Snow" weight="6">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Snow</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Sleet" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Windy</windmin>
+            <windmax type="lookup" parent="Winds">Windy</windmax>
+            <precipitation type="lookup" parent="Precipitations">Sleet</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Snowstorm" weight="9">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Snowstorm</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Blizzard" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Cold</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Cold</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Blizzard</precipitation>
+        </WeightedOption>
+    </TemperateCold>
+
+    <TemperateModerate>
+        <WeightedOption name="Normal" weight="70">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+        </WeightedOption>
+        <WeightedOption name="Heatwave" weight="5">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">HeatWave</effect>
+        </WeightedOption>
+        <WeightedOption name="Coldsnap" weight="5">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">ColdSnap</effect>
+        </WeightedOption>
+        <WeightedOption name="Fog" weight="3">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Fog</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Rain" weight="6">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Windy</windmin>
+            <windmax type="lookup" parent="Winds">Windy</windmax>
+            <precipitation type="lookup" parent="Precipitations">Rain</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Hail" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Windy</windmin>
+            <windmax type="lookup" parent="Winds">Windy</windmax>
+            <precipitation type="lookup" parent="Precipitations">Hail</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Thunderstorm" weight="9">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Thunderstorm</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Blizzard" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Moderate</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Moderate</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Blizzard</precipitation>
+        </WeightedOption>
+    </TemperateModerate>
+
+    <TemperateWarm>
+        <WeightedOption name="Normal" weight="70">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+        </WeightedOption>
+        <WeightedOption name="Heatwave" weight="5">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">HeatWave</effect>
+        </WeightedOption>
+        <WeightedOption name="Coldsnap" weight="5">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <effect type="lookup" parent="Effects">ColdSnap</effect>
+        </WeightedOption>
+        <WeightedOption name="Fog" weight="3">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Fog</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Rain" weight="6">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Windy</windmin>
+            <windmax type="lookup" parent="Winds">Windy</windmax>
+            <precipitation type="lookup" parent="Precipitations">Rain</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Hail" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Windy</windmin>
+            <windmax type="lookup" parent="Winds">Windy</windmax>
+            <precipitation type="lookup" parent="Precipitations">Hail</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Thunderstorm" weight="9">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Thunderstorm</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Blizzard" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Warm</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Warm</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Blizzard</precipitation>
+        </WeightedOption>
+    </TemperateWarm>
 
     <Desert>
-        <Weather>
-            <weight>70</weight>
-            <type>Normal</type>
-            <temp>Hot</temp>
-            <wind>Calm</wind>
-        </Weather>
-        <Weather>
-            <weight>10</weight>
-            <type>Abnormal</type>
-            <temp>Hot</temp>
-            <wind>Windy</wind>
-        </Weather>
-        <Weather>
-            <weight>10</weight>
-            <type>Inclement</type>
-            <temp>Hot</temp>
-            <wind>Windy</wind>
-        </Weather>
-        <Weather>
-            <weight>9</weight>
-            <type>Storm</type>
-            <temp>Hot</temp>
-            <wind>Severe</wind>
-            <precipitation>Duststorm</precipitation>
-        </Weather>
-        <Weather>
-            <weight>1</weight>
-            <type>Powerful Storm</type>
-            <temp>Normal</temp>
-            <wind>Windstorm</wind>
-            <precipitation>Downpour</precipitation>
-        </Weather>
+        <WeightedOption name="Normal" weight="70">
+            <tempmin type="lookup" parent="Temperatures">Hot</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Hot</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+        </WeightedOption>
+        <WeightedOption name="Windy" weight="20">
+            <tempmin type="lookup" parent="Temperatures">Hot</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Hot</tempmax>
+            <windmin type="lookup" parent="Winds">Windy</windmin>
+            <windmax type="lookup" parent="Winds">Windy</windmax>
+        </WeightedOption>
+        <WeightedOption name="Duststorm" weight="9">
+            <tempmin type="lookup" parent="Temperatures">Hot</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Hot</tempmax>
+            <windmin type="lookup" parent="Winds">Severe</windmin>
+            <windmax type="lookup" parent="Winds">Severe</windmax>
+            <precipitation type="lookup" parent="Precipitations">Duststorm</precipitation>
+        </WeightedOption>
+        <WeightedOption name="Downpour" weight="1">
+            <tempmin type="lookup" parent="Temperatures">Hot</tempmin>
+            <tempmax type="lookup" parent="Temperatures">Hot</tempmax>
+            <windmin type="lookup" parent="Winds">Calm</windmin>
+            <windmax type="lookup" parent="Winds">Calm</windmax>
+            <precipitation type="lookup" parent="Precipitations">Downpour</precipitation>
+        </WeightedOption>
     </Desert>
 
 </Weathers>

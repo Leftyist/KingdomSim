@@ -2,12 +2,12 @@ package com.leftyist.kingdomsim.utils
 
 import org.w3c.dom.NodeList
 
-class WeightedTable2 (nodes: NodeList){
+class WeightedTable(nodes: NodeList){
 
       private val options = ArrayList<WeightedOption>()
       private var totalWeight = 0
 
-      class WeightedOption(val weightBound: Int, val name: String, val values: ArrayList<Pair<String, String>>) {
+      data class WeightedOption(val weightBound: Int, val name: String, val values: ArrayList<Pair<String, String>>) {
 
             fun print() {
                   System.out.printf(name + "\t w(%d)", weightBound)
@@ -38,7 +38,7 @@ class WeightedTable2 (nodes: NodeList){
                   else if (node.nodeName == "WeightedOption") {
                         val name = node.attributes.getNamedItem("name").nodeValue
                         val weight = node.attributes.getNamedItem("weight").nodeValue
-                        addOption(weight.toInt(), name, getNodeSubValues(node.childNodes))
+                        addOption(weight.toInt(), name, getNodeSubValues(node))
                   }
             }
       }

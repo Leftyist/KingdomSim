@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
-internal class WeightedTable2Test {
+internal class WeightedTableTest {
 
 
       @BeforeEach
