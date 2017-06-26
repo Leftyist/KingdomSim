@@ -1,11 +1,12 @@
 package com.leftyist.kingdomsim.structures
 
-import com.leftyist.kingdomsim.utils.findChild
-import com.leftyist.kingdomsim.utils.getNodeSubValues
-import com.leftyist.kingdomsim.utils.openFile
-import com.leftyist.kingdomsim.utils.saveFile
+import com.leftyist.kingdomsim.ai.determineWhatToBuild
+import com.leftyist.kingdomsim.utils.*
 import org.w3c.dom.Element
 import org.w3c.dom.Node
+import sun.rmi.runtime.Log
+import java.util.logging.Level
+import java.util.logging.Logger
 
 class Kingdom(val filepath: String) {
       val kingdomDoc = openFile(filepath)
@@ -50,7 +51,6 @@ class Kingdom(val filepath: String) {
                   val cost = node.attributes.getNamedItem("cost").nodeValue.toInt()
                   val turns = node.attributes.getNamedItem("turns")
                   modifyKingdomStat("bp", -cost)
-                  //turns.nodeValue = turns.nodeValue.plus(-1)
                   turns.nodeValue = (turns.nodeValue.toInt() - 1).toString() //"decrement" the string
 
                   //building is done
@@ -76,7 +76,7 @@ class Kingdom(val filepath: String) {
             return node.textContent.toInt()
       }
 
-      private fun modifyKingdomStat(stat: String, value: Int) {
+      fun modifyKingdomStat(stat: String, value: Int) {
             val stats = kingdomDoc.getElementsByTagName("Stats").item(0)
             val node = stats.findChild(stat)
             if(node == null)
@@ -95,7 +95,7 @@ class Kingdom(val filepath: String) {
             node.textContent = (node.textContent.toInt() + value).toString()
       }
 
-      fun addBuildingStats(buildingNode: Node, settlementName: String) {
+      private fun addBuildingStats(buildingNode: Node, settlementName: String) {
             val buildingStats = getNodeSubValues(buildingNode)
             val settlement = kingdomDoc.getElementsByTagName(settlementName).item(0)
             val settlementStats = settlement.findChild("Stats")
@@ -126,7 +126,104 @@ class Kingdom(val filepath: String) {
             }
       }
 
+      private fun upkeepPhase() {
+
+            //STEP 1
+            val stability = getKingdomStat("stability") - getKingdomStat("unrest")
+            val dc = getKingdomStat("controldc")
+            val roll = roll("1d20")
+
+            //fail
+            if(roll == 1 || roll + stability <= dc) {
+                  if(dc - roll - stability < 5)
+                        modifyKingdomStat("unrest", 1)
+                  else
+                        modifyKingdomStat("unrest", roll("1d4"))
+            }
+            //succeed
+            else {
+                  val unrest = getKingdomStat("unrest")
+                  if(unrest > 0)
+                        modifyKingdomStat("unrest", -1)
+                  else
+                        modifyKingdomStat("bp", 1)
+            }
+
+            //STEP 2
+            modifyKingdomStat("bp", -getKingdomStat("consumption"))
+
+            //STEP 3
+            //TODO: roll magic items
+
+            //STEP 4
+            if(getKingdomStat("economy") < 0)
+                  modifyKingdomStat("unrest", 1)
+
+            if(getKingdomStat("stability") < 0)
+                  modifyKingdomStat("unrest", 1)
+
+            if(getKingdomStat("loyalty") < 0)
+                  modifyKingdomStat("unrest", 1)
+
+            //STEP 5
+            //TODO: If the kingdom’s Unrest is 11 or higher, it loses 1 hex (the leaders choose which hex). See Losing Hexes.
+            //If your kingdom’s Unrest ever reaches 20, the kingdom falls into anarchy.
+            // While in anarchy, your kingdom can take no action and treats all Economy, Loyalty,
+            // and Stability check results as 0. Restoring order once a kingdom falls into anarchy
+            // typically requires a number of quests and lengthy adventures by you and the other
+            // would-be leaders to restore the people’s faith in you.
+      }
+
+      private fun edictPhase() {
+            //STEP 1
+            //TODO: Assign leadership
+
+            //STEP 2
+            //TODO: Claim or abandon hexes
+
+            //STEP 3
+            //TODO: Build terrain improvements
+
+            //STEP 4
+            //TODO: Create and improve settlements (build stuff)
+            determineWhatToBuild(this)
+
+            //STEP 5
+            //TODO: Create army units
+
+            //STEP 6
+            //TODO: Issue edicts
+      }
+
+      private fun incomePhase() {
+            //STEP 1
+            //TODO: Personal withdrawal from the treasury
+
+            //STEP 2
+            //TODO: Personal deposits into the treasury
+
+            //STEP 3
+            //TODO: Sell expensive items for BP
+
+            //STEP 4
+            val economy = getKingdomStat("economy")
+            val income = (roll("1d20") + economy)/3
+            modifyKingdomStat("bp", income)
+      }
+
+      private fun eventPhase() {
+            //TODO: roll some events
+      }
+
       fun onNextTurn() {
             processBuildQueue()
+            upkeepPhase()
+            edictPhase()
+            incomePhase()
+            eventPhase()
+      }
+
+      fun printStat(stat: String) {
+            println(stat.capitalize() + ": " + getKingdomStat(stat))
       }
 }

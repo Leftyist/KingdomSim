@@ -1,11 +1,270 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Buildings>
-    <House cost="4" turns="1">
+    <Academy cost="6" turns="4">
+        <economy>2</economy>
+        <loyalty>2</loyalty>
+        <productivity>1</productivity>
+        <lore>2</lore>
+        <society>2</society>
+        <fame>1</fame>
         <population>100</population>
+        <consumption>1</consumption>
+        <type>town</type>
+    </Academy>
+    <Aerie cost="6" turns="3">
+        <stability>2</stability>
+        <defense>1</defense>
+        <population>10</population>
+        <type>town</type>
+    </Aerie>
+    <Alchemist cost="6" turns="3">
+        <economy>1</economy>
+        <population>10</population>
+        <basevalue>1000</basevalue>
+        <type>town</type>
+    </Alchemist>
+    <Arena cost="4" turns="10">
+        <stability>4</stability>
+        <crime>1</crime>
+        <fame>1</fame>
+        <population>100</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </Arena>
+    <Assembly cost="5" turns="6">
+        <economy>2</economy>
+        <stability>1</stability>
+        <corruption>1</corruption>
+        <law>1</law>
+        <society>2</society>
+        <fame>1</fame>
+        <population>50</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </Assembly>
+    <Bank cost="4" turns="7">
+        <economy>4</economy>
+        <population>10</population>
+        <basevalue>2000</basevalue>
+        <type>city</type>
+    </Bank>
+    <BardicCollege cost="5" turns="8">
+        <economy>1</economy>
+        <loyalty>3</loyalty>
+        <stability>1</stability>
+        <fame>1</fame>
+        <population>50</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </BardicCollege>
+    <Barracks cost="6" turns="1">
+        <law>1</law>
+        <defense>2</defense>
+        <population>20</population>
         <type>village</type>
-        <lots>1</lots>
+    </Barracks>
+    <Baths cost="4" turns="1">
+        <economy>1</economy>
+        <stability>1</stability>
+        <population>20</population>
+        <type>town</type>
+    </Baths>
+    <BlackMarket cost="10" turns="5">
+        <economy>2</economy>
+        <stability>1</stability>
+        <corruption>2</corruption>
+        <crime>2</crime>
+        <population>20</population>
+        <basevalue>2000</basevalue>
+        <type>city</type>
+    </BlackMarket>
+    <Bordello cost="4" turns="1">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <corruption>1</corruption>
+        <crime>1</crime>
+        <society>1</society>
+        <infamy>0.334</infamy>
+        <population>20</population>
+        <type>town</type>
+    </Bordello>
+    <Brewery cost="6" turns="1">
+        <loyalty>1</loyalty>
+        <stability>1</stability>
+        <population>20</population>
+        <type>village</type>
+    </Brewery>
+    <Brickyard cost="4" turns="4">
+        <economy>1</economy>
+        <stability>1</stability>
+        <productivity>1</productivity>
+        <population>50</population>
+        <type>village</type>
+    </Brickyard>
+    <Bridge cost="6" turns="1">
+        <economy>1</economy>
+        <type>town</type>
+    </Bridge>
+    <Bureau cost="5" turns="2">
+        <economy>1</economy>
+        <loyalty>-1</loyalty>
+        <stability>1</stability>
+        <corruption>1</corruption>
+        <law>1</law>
+        <population>20</population>
+        <type>city</type>
+    </Bureau>
+    <CastersTower cost="6" turns="6">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <population>10</population>
+        <type>town</type>
+    </CastersTower>
+    <Castle cost="5" turns="12">
+        <economy>2</economy>
+        <loyalty>2</loyalty>
+        <stability>2</stability>
+        <defense>8</defense>
+        <fame>1</fame>
+        <population>200</population>
+        <consumption>1</consumption>
+        <type>town</type>
+    </Castle>
+    <Cathedral cost="5" turns="12">
+        <loyalty>4</loyalty>
+        <stability>4</stability>
+        <law>2</law>
+        <fame>1</fame>
+        <population>100</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </Cathedral>
+    <Cistern cost="6" turns="1">
+        <stability>1</stability>
+        <type>town</type>
+    </Cistern>
+    <CityWall cost="2" turns="1">
+        <economy>-0.25</economy>
+        <stability>0.25</stability>
+        <defense>1</defense>
+        <type>city</type>
+    </CityWall>
+    <Colossus cost="5" turns="12">
+        <economy>2</economy>
+        <loyalty>4</loyalty>
+        <stability>2</stability>
+        <law>2</law>
+        <fame>1</fame>
+        <consumption>1</consumption>
+        <type>village</type>
+    </Colossus>
+    <Courthouse cost="4" turns="4">
+        <loyalty>2</loyalty>
+        <corruption>-1</corruption>
+        <crime>-1</crime>
+        <law>2</law>
+        <population>20</population>
+        <type>town</type>
+    </Courthouse>
+    <Crematorium cost="4" turns="1">
+        <stability>1</stability>
+        <population>10</population>
+        <type>town</type>
+    </Crematorium>
+    <DanceHall cost="4" turns="1">
+        <economy>1</economy>
+        <loyalty>2</loyalty>
+        <corruption>1</corruption>
+        <crime>1</crime>
+        <population>30</population>
+        <type>village</type>
+    </DanceHall>
+    <Dump cost="4" turns="1">
+        <stability>1</stability>
+        <population>10</population>
+        <type>town</type>
+    </Dump>
+    <ExoticArtisan cost="5" turns="2">
+        <economy>1</economy>
+        <stability>1</stability>
+        <population>10</population>
+        <type>town</type>
+    </ExoticArtisan>
+    <ForeignQuarter cost="5" turns="6">
+        <economy>3</economy>
+        <stability>-1</stability>
+        <crime>1</crime>
+        <lore>1</lore>
+        <society>2</society>
+        <population>100</population>
+        <type>city</type>
+    </ForeignQuarter>
+    <Foundry cost="4" turns="4">
+        <economy>1</economy>
+        <stability>1</stability>
+        <productivity>1</productivity>
+        <population>50</population>
+        <type>town</type>
+    </Foundry>
+    <GamblingDen cost="5" turns="2">
+        <economy>2</economy>
+        <corruption>1</corruption>
+        <crime>1</crime>
+        <infamy>0.334</infamy>
+        <population>20</population>
+        <type>town</type>
+    </GamblingDen>
+    <Garrison cost="5" turns="6">
+        <loyalty>2</loyalty>
+        <stability>2</stability>
+        <population>200</population>
+        <type>town</type>
+    </Garrison>
+    <Granary cost="5" turns="2">
+        <loyalty>1</loyalty>
+        <stability>1</stability>
+        <type>village</type>
+    </Granary>
+    <Graveyard cost="4" turns="1">
+        <loyalty>1</loyalty>
+        <type>village</type>
+    </Graveyard>
+    <Guildhall cost="6" turns="6">
+        <economy>2</economy>
+        <loyalty>2</loyalty>
+        <productivity>2</productivity>
+        <law>1</law>
+        <population>100</population>
+        <basevalue>1000</basevalue>
+        <type>city</type>
+    </Guildhall>
+    <HangingGardens cost="4" turns="12">
+        <economy>2</economy>
+        <loyalty>2</loyalty>
+        <lore>1</lore>
+        <society>2</society>
+        <fame>1</fame>
+        <population>20</population>
+        <type>city</type>
+    </HangingGardens>
+    <Herbalist cost="6" turns="2">
+        <loyalty>1</loyalty>
+        <stability>1</stability>
+        <population>10</population>
+        <type>village</type>
+    </Herbalist>
+    <Hospital cost="5" turns="6">
+        <loyalty>1</loyalty>
+        <stability>2</stability>
+        <productivity>2</productivity>
+        <lore>1</lore>
+        <population>100</population>
+        <type>city</type>
+    </Hospital>
+    <House cost="4" turns="1">
+        <population>50</population>
+        <type>village</type>
     </House>
-
     <Inn cost="5" turns="2">
         <economy>1</economy>
         <loyalty>1</loyalty>
@@ -13,7 +272,316 @@
         <population>30</population>
         <basevalue>500</basevalue>
         <type>village</type>
-        <lots>1</lots>
     </Inn>
-
+    <Jail cost="7" turns="2">
+        <loyalty>2</loyalty>
+        <stability>2</stability>
+        <crime>-1</crime>
+        <law>1</law>
+        <population>50</population>
+        <type>village</type>
+    </Jail>
+    <Library cost="4" turns="2">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <lore>1</lore>
+        <population>10</population>
+        <type>village</type>
+    </Library>
+    <Lighthouse cost="6" turns="4">
+        <economy>2</economy>
+        <stability>2</stability>
+        <population>10</population>
+        <type>town</type>
+    </Lighthouse>
+    <Lumberyard cost="6" turns="2">
+        <economy>1</economy>
+        <stability>1</stability>
+        <productivity>1</productivity>
+        <population>50</population>
+        <type>village</type>
+    </Lumberyard>
+    <LuxuryStore cost="7" turns="4">
+        <economy>1</economy>
+        <population>10</population>
+        <basevalue>2000</basevalue>
+        <type>town</type>
+    </LuxuryStore>
+    <MagicShop cost="6" turns="11">
+        <economy>1</economy>
+        <population>10</population>
+        <basevalue>2000</basevalue>
+        <type>city</type>
+    </MagicShop>
+    <MagicalAcademy cost="6" turns="10">
+        <economy>2</economy>
+        <lore>2</lore>
+        <society>1</society>
+        <fame>1</fame>
+        <population>50</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </MagicalAcademy>
+    <Mansion cost="5" turns="2">
+        <stability>1</stability>
+        <law>1</law>
+        <society>1</society>
+        <population>30</population>
+        <type>village</type>
+    </Mansion>
+    <Market cost="6" turns="8">
+        <economy>2</economy>
+        <stability>2</stability>
+        <population>100</population>
+        <basevalue>2000</basevalue>
+        <type>town</type>
+    </Market>
+    <Menagerie cost="4" turns="4">
+        <economy>1</economy>
+        <fame>1</fame>
+        <population>100</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </Menagerie>
+    <MilitaryAcademy cost="6" turns="6">
+        <loyalty>2</loyalty>
+        <stability>1</stability>
+        <law>1</law>
+        <lore>1</lore>
+        <fame>1</fame>
+        <population>100</population>
+        <consumption>1</consumption>
+        <type>town</type>
+    </MilitaryAcademy>
+    <Mill cost="4" turns="2">
+        <economy>1</economy>
+        <stability>1</stability>
+        <productivity>1</productivity>
+        <population>20</population>
+        <type>village</type>
+    </Mill>
+    <Mint cost="6" turns="5">
+        <economy>3</economy>
+        <loyalty>3</loyalty>
+        <stability>1</stability>
+        <fame>1</fame>
+        <population>10</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </Mint>
+    <Moat cost="2" turns="1">
+        <economy>-0.25</economy>
+        <stability>0.25</stability>
+        <defense>1</defense>
+        <type>village</type>
+    </Moat>
+    <Monastery cost="4" turns="4">
+        <stability>1</stability>
+        <law>1</law>
+        <lore>1</lore>
+        <population>50</population>
+        <type>village</type>
+    </Monastery>
+    <Monument cost="6" turns="1">
+        <loyalty>1</loyalty>
+        <type>village</type>
+    </Monument>
+    <Museum cost="6" turns="5">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <lore>2</lore>
+        <society>1</society>
+        <fame>1</fame>
+        <population>20</population>
+        <consumption>1</consumption>
+        <type>town</type>
+    </Museum>
+    <NobleVilla cost="6" turns="4">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <stability>1</stability>
+        <society>1</society>
+        <fame>1</fame>
+        <population>50</population>
+        <consumption>1</consumption>
+        <type>town</type>
+    </NobleVilla>
+    <Observatory cost="3" turns="4">
+        <stability>1</stability>
+        <lore>2</lore>
+        <population>10</population>
+        <type>city</type>
+    </Observatory>
+    <Orphanage cost="4" turns="2">
+        <stability>1</stability>
+        <population>50</population>
+        <type>city</type>
+    </Orphanage>
+    <Palace cost="6" turns="18">
+        <economy>2</economy>
+        <loyalty>6</loyalty>
+        <stability>2</stability>
+        <law>2</law>
+        <fame>1</fame>
+        <population>200</population>
+        <basevalue>1000</basevalue>
+        <consumption>1</consumption>
+        <type>city</type>
+    </Palace>
+    <Park cost="4" turns="1">
+        <loyalty>1</loyalty>
+        <type>town</type>
+    </Park>
+    <PavedStreets cost="4" turns="6">
+        <economy>2</economy>
+        <stability>1</stability>
+        <productivity>2</productivity>
+        <type>city</type>
+    </PavedStreets>
+    <Pier cost="4" turns="4">
+        <economy>1</economy>
+        <stability>1</stability>
+        <crime>1</crime>
+        <population>20</population>
+        <basevalue>1000</basevalue>
+        <type>village</type>
+    </Pier>
+    <SacredGrove cost="4" turns="3">
+        <loyalty>1</loyalty>
+        <stability>1</stability>
+        <society>-1</society>
+        <population>10</population>
+        <type>village</type>
+    </SacredGrove>
+    <SewerSystem cost="4" turns="6">
+        <loyalty>1</loyalty>
+        <stability>2</stability>
+        <crime>1</crime>
+        <productivity>1</productivity>
+        <type>city</type>
+    </SewerSystem>
+    <Shop cost="4" turns="2">
+        <economy>1</economy>
+        <productivity>1</productivity>
+        <population>20</population>
+        <basevalue>500</basevalue>
+        <type>village</type>
+    </Shop>
+    <Shrine cost="4" turns="2">
+        <loyalty>1</loyalty>
+        <population>10</population>
+        <type>village</type>
+    </Shrine>
+    <Smithy cost="6" turns="1">
+        <economy>1</economy>
+        <stability>1</stability>
+        <population>10</population>
+        <type>village</type>
+    </Smithy>
+    <Stable cost="5" turns="2">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <population>10</population>
+        <basevalue>500</basevalue>
+        <type>village</type>
+    </Stable>
+    <Stockyard cost="5" turns="4">
+        <economy>1</economy>
+        <stability>-1</stability>
+        <productivity>1</productivity>
+        <population>100</population>
+        <type>village</type>
+    </Stockyard>
+    <Tannery cost="6" turns="1">
+        <economy>1</economy>
+        <stability>1</stability>
+        <society>-1</society>
+        <population>20</population>
+        <type>village</type>
+    </Tannery>
+    <Tavern cost="6" turns="2">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <corruption>1</corruption>
+        <population>20</population>
+        <basevalue>500</basevalue>
+        <type>village</type>
+    </Tavern>
+    <Temple cost="4" turns="8">
+        <loyalty>2</loyalty>
+        <stability>2</stability>
+        <population>50</population>
+        <type>town</type>
+    </Temple>
+    <Tenement cost="1">
+        <population>100</population>
+        <type>town</type>
+    </Tenement>
+    <Theater cost="4" turns="6">
+        <economy>2</economy>
+        <stability>2</stability>
+        <population>50</population>
+        <type>town</type>
+    </Theater>
+    <TownHall cost="6" turns="4">
+        <economy>1</economy>
+        <loyalty>1</loyalty>
+        <stability>1</stability>
+        <law>1</law>
+        <population>50</population>
+        <type>town</type>
+    </TownHall>
+    <TradeShop cost="5" turns="2">
+        <economy>1</economy>
+        <stability>1</stability>
+        <productivity>1</productivity>
+        <population>10</population>
+        <basevalue>500</basevalue>
+        <type>village</type>
+    </TradeShop>
+    <Tunnels cost="8" turns="2">
+        <economy>1</economy>
+        <stability>1</stability>
+        <crime>1</crime>
+        <type>town</type>
+    </Tunnels>
+    <University cost="6" turns="8">
+        <economy>3</economy>
+        <loyalty>3</loyalty>
+        <fame>1</fame>
+        <population>200</population>
+        <consumption>1</consumption>
+        <type>city</type>
+    </University>
+    <Warehouse cost="8" turns="2">
+        <economy>1</economy>
+        <productivity>1</productivity>
+        <population>20</population>
+        <type>town</type>
+    </Warehouse>
+    <Watchtower cost="6" turns="2">
+        <stability>1</stability>
+        <defense>2</defense>
+        <population>20</population>
+        <type>village</type>
+    </Watchtower>
+    <Waterfront cost="6" turns="12">
+        <economy>4</economy>
+        <productivity>2</productivity>
+        <population>200</population>
+        <basevalue>4000</basevalue>
+        <type>city</type>
+    </Waterfront>
+    <Watergate cost="2" turns="1">
+        <type>town</type>
+    </Watergate>
+    <Waterway cost="3" turns="1">
+        <type>town</type>
+    </Waterway>
+    <Windmill cost="8" turns="2">
+        <economy>1</economy>
+        <productivity>1</productivity>
+        <population>10</population>
+        <type>village</type>
+    </Windmill>
 </Buildings>
