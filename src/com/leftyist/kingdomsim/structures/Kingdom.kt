@@ -1,6 +1,9 @@
 package com.leftyist.kingdomsim.structures
 
-import com.leftyist.kingdomsim.utils.*
+import com.leftyist.kingdomsim.utils.findChild
+import com.leftyist.kingdomsim.utils.getNodeSubValues
+import com.leftyist.kingdomsim.utils.openFile
+import com.leftyist.kingdomsim.utils.saveFile
 import org.w3c.dom.Element
 import org.w3c.dom.Node
 
@@ -44,8 +47,10 @@ class Kingdom(val filepath: String) {
                   if(node == null || node.nodeName == null || node.nodeName == "#text")
                         continue
 
-                  modifyKingdomStat("bp", -(node.attributes.getNamedItem("cost").nodeValue.toInt()))
+                  val cost = node.attributes.getNamedItem("cost").nodeValue.toInt()
                   val turns = node.attributes.getNamedItem("turns")
+                  modifyKingdomStat("bp", -cost)
+                  //turns.nodeValue = turns.nodeValue.plus(-1)
                   turns.nodeValue = (turns.nodeValue.toInt() - 1).toString() //"decrement" the string
 
                   //building is done
@@ -60,6 +65,15 @@ class Kingdom(val filepath: String) {
                         settlement.findChild("Buildings")!!.appendChild(removedNode)
                   }
             }
+      }
+
+      fun getKingdomStat(stat: String): Int {
+            val stats = kingdomDoc.getElementsByTagName("Stats").item(0)
+            val node = stats.findChild(stat)
+            if(node == null)
+                  throw IllegalArgumentException("Kingdom stat doesn't exist.")
+
+            return node.textContent.toInt()
       }
 
       private fun modifyKingdomStat(stat: String, value: Int) {
@@ -110,5 +124,9 @@ class Kingdom(val filepath: String) {
                               modifyKingdomStat(stats.first, stats.second.toInt())
                   }
             }
+      }
+
+      fun onNextTurn() {
+            processBuildQueue()
       }
 }

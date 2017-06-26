@@ -61,8 +61,8 @@
                 <society>0</society>
                 <danger>0</danger>
             </Stats>
-
             <Buildings>
+
                 <House>
                     <population>100</population>
                     <type>village</type>
