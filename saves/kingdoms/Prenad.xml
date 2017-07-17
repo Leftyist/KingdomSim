@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Kingdom>
     <Stats>
-        <name>unnamed</name>
+        <name>Prenad</name>
         <alignment>none</alignment>
         <government>none</government>
-        <loyalty>0</loyalty>
-        <stability>0</stability>
-        <economy>0</economy>
+        <playercontrolled>true</playercontrolled>
+        <loyalty>4</loyalty>
+        <stability>2</stability>
+        <economy>3</economy>
         <unrest>0</unrest>
         <consumption>0</consumption>
         <controldc>20</controldc>
-        <bp>0</bp>
+        <bp>30</bp>
         <population>0</population>
         <fame>0</fame>
         <infamy>0</infamy>

@@ -1,6 +1,7 @@
 package com.leftyist.kingdomsim.ai
 
 import com.leftyist.kingdomsim.structures.Kingdom
+import com.leftyist.kingdomsim.structures.WorldManager
 import com.leftyist.kingdomsim.utils.findChild
 import com.leftyist.kingdomsim.utils.openFile
 import java.util.*
@@ -45,10 +46,6 @@ private fun buildingType(type: String): Int {
             "city" -> return 2
             else -> return 0
       }
-}
-
-fun Pair<String, Double>.compare() {
-
 }
 
 class BuildingPair(val name: String, val rank: Double) : Comparable<BuildingPair> {

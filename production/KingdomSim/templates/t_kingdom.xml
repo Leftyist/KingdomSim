@@ -4,6 +4,7 @@
         <name>unnamed</name>
         <alignment>none</alignment>
         <government>none</government>
+        <playercontrolled>true</playercontrolled>
         <loyalty>0</loyalty>
         <stability>0</stability>
         <economy>0</economy>

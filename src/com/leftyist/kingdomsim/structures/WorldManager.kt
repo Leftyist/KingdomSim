@@ -1,18 +1,23 @@
 package com.leftyist.kingdomsim.structures
 
-class WorldManager {
+object WorldManager {
       val kingdoms = ArrayList<Kingdom>()
 
-      init {
-
+      fun addKingdom(k: Kingdom) {
+            kingdoms.add(k)
       }
 
-      fun addKingdom() {
-
+      fun getKingdom(name: String): Kingdom? {
+            for(kingdom in kingdoms) {
+                  if(kingdom.getKingdomStatString("name") == name)
+                        return kingdom
+            }
+            return null
       }
 
       fun onTurnChange() {
-            for (kingdom in kingdoms)
+            for (kingdom in kingdoms){
                   kingdom.onNextTurn()
+            }
       }
 }

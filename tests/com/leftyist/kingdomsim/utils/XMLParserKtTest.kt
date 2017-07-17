@@ -68,10 +68,6 @@ internal class XMLParserKtTest {
 
       @Test
       fun buildingTest() {
-            val pq = findBestBuilding("stability", "village")
-            for(pair in pq.sortedDescending()) {
-                  println(pair.name + ": " + pair.rank)
-            }
       }
 
       @Test

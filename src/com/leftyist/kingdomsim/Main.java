@@ -1,30 +1,42 @@
 package com.leftyist.kingdomsim;
 
-import javax.swing.JFrame;
-import com.leftyist.kingdomsim.forms.formWeather;
-
-/**
- * Created by arianfarahani on 4/12/17.
- */
 public class Main
 {
-      public static void main(String[] args) {
+      public static void main(String[] args)
+      {
             //Weather weather = new Weather();
-            loadFrame();
+            //WindowManager.INSTANCE.loadFrame();
+
+
             //weather.rollWeather();
       }
 
-      public static void loadFrame() {
-            formWeather form = new formWeather();
+      public static void loadFrame()
+      {
+            /*
+            String path = "saves/kingdoms/Prenad.xml";
+            Kingdom k = new Kingdom(path);
+            k.addSettlement("Colony");
+            k.addBuilding("Colony", "Inn");
+            WorldManager.INSTANCE.addKingdom(k);
+
+            formKingdom form = new formKingdom(k.getKingdomStatString("name"));
+            */
 
 
-            JFrame frame = new JFrame("Weather window");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      }
+}
 
-            frame.setContentPane(form.getPanel());
+class JQ {
+      public static void main(String[] args) {
+            StringBuilder sb = new StringBuilder("UpWork");
 
-            frame.setSize(200, 250);
-            //frame.pack();
-            frame.setVisible(true);
+            sb.insert(6,"-");
+            sb.insert(0,"-");
+            sb.insert(4,"-");
+            System.out.println(sb);
+      }
+      private static void f() {
+            f();
       }
 }

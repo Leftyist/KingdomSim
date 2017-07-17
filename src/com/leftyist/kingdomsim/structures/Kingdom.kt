@@ -41,6 +41,29 @@ class Kingdom(val filepath: String) {
             queue.appendChild(kingdomDoc.importNode(buildingNode, true))
       }
 
+      data class buildingInConstruction(val settlement: String, val building: String, val cost: Int, val turns: Int)
+
+      fun getBuildQueue(): ArrayList<buildingInConstruction> {
+            val buildQueue = ArrayList<buildingInConstruction>()
+
+            val queueNode = kingdomDoc.getElementsByTagName("BuildingQueue").item(0)
+
+            for(i in 0..queueNode.childNodes.length - 1) {
+                  val node = queueNode.childNodes.item(i)
+                  if(node == null || node.nodeName == null || node.nodeName == "#text")
+                        continue
+
+                  val cost = node.attributes.getNamedItem("cost").nodeValue.toInt()
+                  val turns = node.attributes.getNamedItem("turns").nodeValue.toInt()
+                  val settlementName = node.attributes.getNamedItem("settlement").nodeValue
+                  val building = node.nodeName
+
+                  val bundle = buildingInConstruction(settlementName, building, cost, turns)
+                  buildQueue.add(bundle)
+            }
+            return buildQueue
+      }
+
       fun processBuildQueue() {
             val buildQueue = kingdomDoc.getElementsByTagName("BuildingQueue").item(0)
             for(i in 0..buildQueue.childNodes.length - 1) {
@@ -74,6 +97,18 @@ class Kingdom(val filepath: String) {
                   throw IllegalArgumentException("Kingdom stat doesn't exist.")
 
             return node.textContent.toInt()
+      }
+
+      fun getKingdomStatString(stat: String): String {
+            val stats = kingdomDoc.getElementsByTagName("Stats").item(0)
+            val node = stats.findChild(stat)
+            if(node == null)
+                  throw IllegalArgumentException("Kingdom stat doesn't exist.")
+
+            if(node.textContent == null)
+                  return ""
+
+            return node.textContent
       }
 
       fun modifyKingdomStat(stat: String, value: Int) {
